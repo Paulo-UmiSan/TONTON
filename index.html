@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONTON Shipyard - Excelência em Serviços Navais</title>
+    <meta name="description" content="Sociedade Anônima especializada em manutenção, atracação e construção metálica naval. 370 m² à beira-mar em Vila Velha/ES.">
+    <meta name="keywords" content="estaleiro, naval, rebocadores, atracação, manutenção naval, Vila Velha, Espírito Santo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="TONTON Shipyard - Excelência em Serviços Navais">
+    <meta property="og:description" content="Sociedade Anônima especializada em manutenção, atracação e construção metálica naval.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TONTON Shipyard",
+        "description": "Sociedade Anônima especializada em serviços navais",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Beira Mar, 71",
+            "addressLocality": "Vila Velha",
+            "addressRegion": "ES",
+            "addressCountry": "BR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-27-9999-9999",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/tonton-logo.png" alt="TONTON Shipyard" class="logo">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#mercado" class="nav-link">Mercado</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#financeiro" class="nav-link">Financeiro</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </div>
+            <div class="nav-actions">
+                <select id="language-selector" class="language-select">
+                    <option value="PT">PT</option>
+                    <option value="EN">EN</option>
+                </select>
+                <button class="btn btn-primary" onclick="openModal('business-plan-modal')">
+                    <i data-lucide="download"></i>
+                    Plano de Negócios
+                </button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in-up">TONTON SHIPYARD</h1>
+            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.2s;">Sociedade Anônima – Lucro Real</p>
+            <div class="hero-highlight fade-in-up" style="animation-delay: 0.4s;">
+                <h3>Localização Estratégica</h3>
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    370 m² à beira-mar em Vila Velha/ES
+                </p>
+            </div>
+            <button class="btn btn-hero fade-in-up" style="animation-delay: 0.6s;">
+                Conheça Nossos Serviços
+            </button>
+        </div>
+    </section>
+
+    <!-- Mercado & Oportunidades -->
+    <section id="mercado" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mercado & Oportunidades</h2>
+                <p>Análise do cenário atual e potencial de crescimento</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <!-- Escalada de Custos -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="trending-up"></i>
+                            Escalada de Custos de Atracação
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="cost-comparison">
+                            <div class="cost-item">
+                                <span class="cost-year">2024</span>
+                                <span class="cost-value cost-good">R$ 20.000/mês</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-year">2025</span>
+                                <span class="cost-value cost-bad">R$ 50.000+/mês</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="alert alert-danger">
+                                <p>Aumento de 150% nos custos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demanda Reprimida -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="ship"></i>
+                            Demanda Reprimida
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="demand-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">13</div>
+                                <p>Rebocadores ativos na Grande Vitória</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">Dezenas</div>
+                                <p>Lanchas e embarcações de pesca artesanal</p>
+                            </div>
+                            <div class="alert alert-info">
+                                <p>Mercado em expansão com alta demanda por serviços especializados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problemas & Soluções -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Problemas & Soluções</h2>
+                <p>Identificação de desafios e estratégias de resolução</p>
+            </div>
+            
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(0)">
+                        <h3>Escalada de Custos Externos</h3>
+                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="problem-solution">
+                            <div class="problem">
+                                <h4><i data-lucide="alert-triangle"></i> Problema Identificado</h4>
+                                <p>Escalada de custos externos em atracação e manutenção, impactando diretamente a margem operacional.</p>
+                            </div>
+                            <div class="solution">
+                                <h4><i data-lucide="lightbulb"></i> Solução Proposta</h4>
+                                <p>Internalizar serviços no TONTON Shipyard, convertendo <strong>R$ 150k/mês</strong> de despesa em receita própria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(1)">
+                        <h3>Dependência de Terceiros</h3>
+                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="problem-solution">
+                            <div class="problem">
+                                <h4><i data-lucide="alert-triangle"></i> Problema Identificado</h4>
+                                <p>Dependência de terceiros para docagem e reparos, gerando indisponibilidade prolongada da frota.</p>
+                            </div>
+                            <div class="solution">
+                                <h4><i data-lucide="lightbulb"></i> Solução Proposta</h4>
+                                <p>Implantar carreira/dique flutuante até <strong>Y + 1</strong>, reduzindo tempo de indisponibilidade de frota.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(2)">
+                        <h3>Oferta Limitada Regional</h3>
+                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="problem-solution">
+                            <div class="problem">
+                                <h4><i data-lucide="alert-triangle"></i> Problema Identificado</h4>
+                                <p>Oferta limitada de estaleiros de pequeno porte na Grande Vitória, criando gargalo no mercado.</p>
+                            </div>
+                            <div class="solution">
+                                <h4><i data-lucide="lightbulb"></i> Solução Proposta</h4>
+                                <p>Estratégia de preço de penetração (≤ R$ 600/dia) + serviço premium para capturar market share inicial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta de Serviços -->
+    <section id="servicos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Oferta de Serviços</h2>
+                <p>Soluções completas para o setor naval</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h3>Manutenção</h3>
+                    <p>Serviços especializados de manutenção preventiva e corretiva para embarcações</p>
+                </div>
+                
+                <div class="service-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="service-icon">
+                        <i data-lucide="anchor"></i>
+                    </div>
+                    <h3>Atracação</h3>
+                    <p>Infraestrutura completa para atracação segura de rebocadores e embarcações</p>
+                </div>
+                
+                <div class="service-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i data-lucide="ship"></i>
+                    </div>
+                    <h3>Construção Metálica</h3>
+                    <p>Fabricação e reparo de estruturas metálicas navais com alta qualidade</p>
+                </div>
+                
+                <div class="service-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="service-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Engenharia</h3>
+                    <p>Consultoria e projetos de engenharia naval especializados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benchmark & Pricing -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benchmark & Pricing</h2>
+                <p>Comparativo competitivo de preços</p>
+            </div>
+            
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">Comparativo de Preços - Estaleiros Regionais</h3>
+                </div>
+                <div class="card-content">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Estaleiro</th>
+                                    <th>Docagem (one-off)</th>
+                                    <th>Diária em Carreira</th>
+                                    <th>Juros e Multa*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold">Argemiro</td>
+                                    <td class="text-center text-green font-bold">R$ 6.000</td>
+                                    <td class="text-center text-green font-bold">R$ 600</td>
+                                    <td class="text-center text-gray">A definir</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold">Prainha</td>
+                                    <td class="text-center text-red font-bold">R$ 12.000</td>
+                                    <td class="text-center text-red font-bold">R$ 1.200</td>
+                                    <td class="text-center text-gray">A definir</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td class="font-bold">TONTON (Alvo)</td>
+                                    <td class="text-center font-bold">Paridade de entrada</td>
+                                    <td class="text-center font-bold">≤ R$ 600</td>
+                                    <td class="text-center text-gray font-bold">A definir</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">* Política de juros e multa será detalhada em etapa posterior</p>
+                    <div class="alert alert-info">
+                        <p>Estratégia de Penetração: Preços competitivos para captura de mercado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benchmark & FMM -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benchmark & FMM</h2>
+                <p>Acesso ao Fundo da Marinha Mercante</p>
+            </div>
+            
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i data-lucide="anchor"></i>
+                        Fundo da Marinha Mercante (FMM)
+                    </h3>
+                </div>
+                <div class="card-content">
+                    <div class="grid grid-2">
+                        <div>
+                            <h4>Benefícios do FMM</h4>
+                            <ul class="benefits-list">
+                                <li><i data-lucide="check-circle"></i> Financiamento CAPEX futuro</li>
+                                <li><i data-lucide="check-circle"></i> Custo de capital reduzido</li>
+                                <li><i data-lucide="check-circle"></i> Linhas de crédito especializadas</li>
+                                <li><i data-lucide="check-circle"></i> Apoio governamental ao setor</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Cronograma de Acesso</h4>
+                            <div class="timeline-simple">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker timeline-warning">M6-M12</div>
+                                    <div class="timeline-content">
+                                        <strong>Protocolos FMM & Antaq</strong>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker timeline-info">Y+1</div>
+                                    <div class="timeline-content">
+                                        <strong>Habilitação completa</strong>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker timeline-success">Y+2</div>
+                                    <div class="timeline-content">
+                                        <strong>Acesso a financiamentos</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Plano Financeiro -->
+    <section id="financeiro" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plano Financeiro</h2>
+                <p>Investimentos e projeções de retorno</p>
+            </div>
+            
+            <div class="grid grid-2 mb-4">
+                <!-- Investimento Principal -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="dollar-sign"></i>
+                            Investimento-Chave: Aquisição do Imóvel
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="investment-total">
+                            <div class="investment-value">R$ 3.698.000,00</div>
+                            <p>Valor total do imóvel</p>
+                        </div>
+                        <div class="payment-schedule">
+                            <div class="payment-item payment-success">
+                                <span>Entrada (Jul/25)</span>
+                                <span class="font-bold">R$ 750.000</span>
+                            </div>
+                            <div class="payment-item payment-info">
+                                <span>2ª parcela (Ago/25)</span>
+                                <span class="font-bold">R$ 250.000</span>
+                            </div>
+                            <div class="payment-item payment-info">
+                                <span>3ª parcela (Set/25)</span>
+                                <span class="font-bold">R$ 250.000</span>
+                            </div>
+                            <div class="payment-item payment-warning">
+                                <span>36x parcelas (Mai/25–Abr/28)</span>
+                                <span class="font-bold">R$ 68.000/mês</span>
+                            </div>
+                        </div>
+                        <div class="capex-info">
+                            <p>CAPEX inicial adequação: <strong>R$ 30.000,00</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Snapshot -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="bar-chart-3"></i>
+                            Financial Snapshot
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="financial-grid">
+                            <div class="financial-item financial-expense">
+                                <div class="financial-value">R$ 340-405k</div>
+                                <p>Desembolso 2024 (terceiros)</p>
+                            </div>
+                            <div class="financial-item financial-cost">
+                                <div class="financial-value">R$ 100k/mês</div>
+                                <p>Manutenção interna atual</p>
+                            </div>
+                        </div>
+                        <div class="revenue-projection">
+                            <h4>Receita Alvo (Fase 1)</h4>
+                            <div class="revenue-item">
+                                <span>Manutenção internalizada</span>
+                                <span class="revenue-value">R$ 100k/mês</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span>Atracação rebocadores*</span>
+                                <span class="revenue-value">R$ 50k/mês</span>
+                            </div>
+                            <div class="revenue-total">
+                                <span>Total mensal</span>
+                                <span class="revenue-value-total">R$ 150k/mês</span>
+                            </div>
+                            <p class="revenue-note">* Validar com clientes</p>
+                        </div>
+                        <div class="alert alert-success">
+                            <p>Payback &lt; 12 meses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrutura dos Desembolsos -->
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i data-lucide="pie-chart"></i>
+                        Estrutura dos Desembolsos
+                    </h3>
+                </div>
+                <div class="card-content">
+                    <div class="grid grid-3 mb-4">
+                        <div class="pie-stat">
+                            <div class="pie-circle pie-blue">97%</div>
+                            <h4>Imóvel</h4>
+                            <p>R$ 3.698.000</p>
+                        </div>
+                        <div class="pie-stat">
+                            <div class="pie-circle pie-green">3%</div>
+                            <h4>CAPEX</h4>
+                            <p>R$ 30.000</p>
+                        </div>
+                        <div class="pie-stat">
+                            <div class="pie-circle pie-turquoise">Total</div>
+                            <h4>Investimento</h4>
+                            <p>R$ 3.728.000</p>
+                        </div>
+                    </div>
+
+                    <div class="opex-comparison">
+                        <h4>OPEX: Antes vs Depois</h4>
+                        <div class="grid grid-2">
+                            <div class="opex-card opex-current">
+                                <h5>Cenário Atual</h5>
+                                <div class="opex-item">
+                                    <span>Terceiros (atracação + serviços)</span>
+                                    <span class="font-bold">R$ 405k/ano</span>
+                                </div>
+                                <div class="opex-item">
+                                    <span>MO interna</span>
+                                    <span class="font-bold">R$ 100k/mês</span>
+                                </div>
+                            </div>
+                            <div class="opex-card opex-future">
+                                <h5>Pós-TONTON</h5>
+                                <div class="opex-item">
+                                    <span>Receita internalizada</span>
+                                    <span class="font-bold">R$ 150k/mês</span>
+                                </div>
+                                <div class="opex-item">
+                                    <span>Economia anual</span>
+                                    <span class="font-bold">R$ 1.8M+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESG & Compliance -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>ESG & Compliance</h2>
+                <p>Cronograma de licenças e conformidade</p>
+            </div>
+            
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i data-lucide="calendar"></i>
+                        Cronograma Jurídico-Regulatório
+                    </h3>
+                </div>
+                <div class="card-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker timeline-progress">M0-M3</div>
+                            <div class="timeline-content">
+                                <h4>Fase Inicial</h4>
+                                <p>CNPJ, licença municipal, oficinas básicas</p>
+                                <span class="badge badge-warning">Em andamento</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker timeline-pending">M4</div>
+                            <div class="timeline-content">
+                                <h4>Início Operacional</h4>
+                                <p>Início manutenção externa (sem carreira)</p>
+                                <span class="badge badge-outline">Planejado</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker timeline-pending">M6-M12</div>
+                            <div class="timeline-content">
+                                <h4>Licenciamento Completo</h4>
+                                <p>Licenças ambientais + protocolos FMM & Antaq</p>
+                                <span class="badge badge-outline">Planejado</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker timeline-pending">Y+1</div>
+                            <div class="timeline-content">
+                                <h4>Expansão Infraestrutura</h4>
+                                <p>Construção da carreira e/ou dique flutuante (libera docagem)</p>
+                                <span class="badge badge-outline">Planejado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura Jurídica -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Estrutura Jurídica</h2>
+                <p>Forma societária e objeto social</p>
+            </div>
+            
+            <div class="grid grid-2 mb-4">
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">Forma Societária</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="legal-structure">
+                            <div class="legal-type">S.A. – Lucro Real</div>
+                            <p>Sociedade Anônima (Ano 1)</p>
+                        </div>
+                        <div class="shareholders">
+                            <h4>Acordo de Acionistas</h4>
+                            <div class="shareholder-item">
+                                <span>UMI SAN</span>
+                                <span class="share-percentage">51%</span>
+                            </div>
+                            <div class="shareholder-item">
+                                <span>Investidores</span>
+                                <span class="share-percentage">49%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">Objeto Social / CNAE</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="cnae-list">
+                            <div class="cnae-item">
+                                <div class="cnae-code">3317-1/01</div>
+                                <p>Manutenção e reparação de embarcações</p>
+                            </div>
+                            <div class="cnae-item">
+                                <div class="cnae-code">3011-3/01, 3011-3/02</div>
+                                <p>Construção de embarcações</p>
+                            </div>
+                            <div class="cnae-item">
+                                <div class="cnae-code">3831-9/99</div>
+                                <p>Recuperação de materiais metálicos</p>
+                            </div>
+                            <div class="cnae-item">
+                                <div class="cnae-code">71.12-0-00</div>
+                                <p>Serviços de engenharia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Negócio - Estrutura e Operação -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Negócio – Estrutura e Operação</h2>
+                <p>Modelo operacional e cronograma de implantação</p>
+            </div>
+            
+            <div class="grid grid-3 mb-4">
+                <!-- Estrutura Jurídica & Fiscal -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="building"></i>
+                            Estrutura Jurídica & Fiscal
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="business-structure">
+                            <div class="structure-item">
+                                <h4>Sociedade Anônima (S.A.)</h4>
+                                <p>Flexibilidade para captação de recursos</p>
+                            </div>
+                            <div class="structure-item">
+                                <h4>Regime Lucro Real</h4>
+                                <p>Otimização fiscal via deduções de investimento desde o primeiro exercício</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviços Oferecidos -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="layers"></i>
+                            Serviços Oferecidos (Faseados)
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="service-phases">
+                            <div class="phase-item">
+                                <div class="phase-badge phase-1">Fase 1</div>
+                                <div class="phase-content">
+                                    <strong>M0–M3</strong>
+                                    <p>Manutenções leves flutuantes para terceiros</p>
+                                </div>
+                            </div>
+                            <div class="phase-item">
+                                <div class="phase-badge phase-2">Fase 2</div>
+                                <div class="phase-content">
+                                    <strong>M4</strong>
+                                    <p>Atracação em bóia/cais; manutenção interna UMI SAN</p>
+                                </div>
+                            </div>
+                            <div class="phase-item">
+                                <div class="phase-badge phase-3">Fase 3</div>
+                                <div class="phase-content">
+                                    <strong>M6–M12</strong>
+                                    <p>Estrutura regulatória completa para FMM e ANTAQ</p>
+                                </div>
+                            </div>
+                            <div class="phase-item">
+                                <div class="phase-badge phase-future">Futuro</div>
+                                <div class="phase-content">
+                                    <strong>Y + 1</strong>
+                                    <p>Construção de carreira ou dique flutuante</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cronograma de Implantação -->
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i data-lucide="clock"></i>
+                            Cronograma de Implantação
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="implementation-timeline">
+                            <div class="timeline-phase">
+                                <div class="timeline-phase-header">
+                                    <div class="timeline-phase-number">1</div>
+                                    <h4>Estruturação</h4>
+                                    <span class="timeline-duration">3 meses</span>
+                                </div>
+                                <p>CNPJ, licenças iniciais, setup físico</p>
+                            </div>
+                            <div class="timeline-phase">
+                                <div class="timeline-phase-header">
+                                    <div class="timeline-phase-number">2</div>
+                                    <h4>Início Operações</h4>
+                                    <span class="timeline-duration">M + 4</span>
+                                </div>
+                                <p>Serviços de manutenção flutuante</p>
+                            </div>
+                            <div class="timeline-phase">
+                                <div class="timeline-phase-header">
+                                    <div class="timeline-phase-number">3</div>
+                                    <h4>Adequação Regulatória</h4>
+                                    <span class="timeline-duration">6-12 meses</span>
+                                </div>
+                                <p>Atendimento FMM / ANTAQ</p>
+                            </div>
+                            <div class="timeline-phase">
+                                <div class="timeline-phase-header">
+                                    <div class="timeline-phase-number">4</div>
+                                    <h4>Expansão</h4>
+                                    <span class="timeline-duration">Futuro</span>
+                                </div>
+                                <p>Carreira ou dique; escala plena de receita</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Riscos & Estratégia de Mitigação -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Riscos & Estratégia de Mitigação</h2>
+                <p>Análise abrangente de riscos e planos de contingência</p>
+            </div>
+            
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">Matriz de Riscos Detalhada</h3>
+                </div>
+                <div class="card-content">
+                    <div class="table-responsive">
+                        <table class="table risk-table">
+                            <thead>
+                                <tr>
+                                    <th>⚠️ Risco</th>
+                                    <th>Descrição</th>
+                                    <th>Mitigação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="risk-category">
+                                        <div class="risk-icon legal">⚖️</div>
+                                        <strong>Legal</strong>
+                                    </td>
+                                    <td>Imóvel sem escritura pública e sem registro RIP em nome do vendedor.</td>
+                                    <td>Due-diligence jurídica; cláusula de rescisão no contrato; custódia de pagamento até regularização.</td>
+                                </tr>
+                                <tr>
+                                    <td class="risk-category">
+                                        <div class="risk-icon financial">💰</div>
+                                        <strong>Financeiro</strong>
+                                    </td>
+                                    <td>Eventual deterioração da saúde econômica do grupo antes da quitação do imóvel; recursos limitados para CAPEX.</td>
+                                    <td>Escalonar CAPEX; reservar caixa mínimo de 12 meses de parcelas; linha contingencial FMM.</td>
+                                </tr>
+                                <tr>
+                                    <td class="risk-category">
+                                        <div class="risk-icon environmental">🌿</div>
+                                        <strong>Ambiental</strong>
+                                    </td>
+                                    <td>Atrasos na obtenção de licenças ambientais.</td>
+                                    <td>Operar manutenção flutuante a seco enquanto tramita licenciamento; contratar consultoria especializada.</td>
+                                </tr>
+                                <tr>
+                                    <td class="risk-category">
+                                        <div class="risk-icon competitive">⚔️</div>
+                                        <strong>Concorrência</strong>
+                                    </td>
+                                    <td>SS Naval e Zemax Log já posicionadas; entrada de novos players.</td>
+                                    <td>Diferenciação por SLA, preço de penetração e parcerias exclusivas com rebocadores locais.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governança & Grupo -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Governança & Grupo</h2>
+                <p>Estrutura corporativa e liderança</p>
+            </div>
+            
+            <div class="grid grid-2 mb-4">
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">UMI SAN</h3>
+                        <p class="card-subtitle">Sociedade Anônima</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Estrutura corporativa sólida com governança transparente e foco em resultados sustentáveis.</p>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">Hydrosolos</h3>
+                        <p class="card-subtitle">Empresa do Grupo</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Expertise em soluções ambientais e engenharia, complementando o portfólio naval.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-outline" onclick="openModal('sustainability-modal')">
+                    Relatório de Sustentabilidade
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">Informações de Contato</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Rua Beira Mar, 71 – Glória, Vila Velha / ES</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="phone"></i>
+                                <span>+55 (27) 9999-9999</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <span>contato@tontonshipyard.com.br</span>
+                            </div>
+                        </div>
+                        <div class="map-placeholder">
+                            <p>Mapa - Rua Beira Mar, 71 – Glória, Vila Velha / ES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <div class="card-header">
+                        <h3 class="card-title">Envie uma Mensagem</h3>
+                    </div>
+                    <div class="card-content">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <input type="text" placeholder="Nome" required>
+                                <input type="text" placeholder="Empresa">
+                            </div>
+                            <input type="email" placeholder="E-mail" required>
+                            <input type="tel" placeholder="Telefone">
+                            <textarea placeholder="Mensagem" rows="4" required></textarea>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/tonton-logo.png" alt="TONTON Shipyard" class="footer-logo">
+                    <p>Excelência em serviços navais com infraestrutura de primeira classe.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li>Manutenção Naval</li>
+                        <li>Atracação</li>
+                        <li>Construção Metálica</li>
+                        <li>Engenharia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li>Sobre Nós</li>
+                        <li>Governança</li>
+                        <li>Sustentabilidade</li>
+                        <li>Carreiras</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Termos de Uso</li>
+                        <li>Política de Privacidade</li>
+                        <li>Política de Juros e Multa*</li>
+                    </ul>
+                    <p class="footer-note">* A ser detalhado em etapa posterior</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TONTON Shipyard. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Business Plan Modal -->
+    <div id="business-plan-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Download do Plano de Negócios</h3>
+                <button class="modal-close" onclick="closeModal('business-plan-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Baixe nosso plano de negócios completo com todas as projeções financeiras e análises de mercado.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary">
+                        <i data-lucide="download"></i>
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sustainability Modal -->
+    <div id="sustainability-modal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Relatório de Sustentabilidade</h3>
+                <button class="modal-close" onclick="closeModal('sustainability-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Nosso compromisso com práticas ESG e desenvolvimento sustentável</p>
+                <div class="sustainability-stats">
+                    <div class="sustainability-stat">
+                        <div class="stat-value">100%</div>
+                        <p>Conformidade Ambiental</p>
+                    </div>
+                    <div class="sustainability-stat">
+                        <div class="stat-value">50+</div>
+                        <p>Empregos Diretos</p>
+                    </div>
+                    <div class="sustainability-stat">
+                        <div class="stat-value">15%</div>
+                        <p>Redução Emissões</p>
+                    </div>
+                </div>
+                <p>O TONTON Shipyard está comprometido com práticas sustentáveis, gerando valor econômico enquanto preserva o meio ambiente marinho e contribui para o desenvolvimento da comunidade local.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
