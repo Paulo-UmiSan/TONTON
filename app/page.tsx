@@ -1,5 +1,13 @@
 "use client"
 
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import {
@@ -10,27 +18,19 @@ import {
   DollarSign,
   Users,
   MapPin,
-  Phone,
-  Mail,
   Download,
   BarChart3,
   PieChart,
   Calendar,
   CheckCircle,
+  Scale,
+  FileText,
+  Calculator,
+  BadgeIcon as Certificate,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import Image from "next/image"
@@ -38,7 +38,6 @@ import Link from "next/link"
 
 export default function TontonShipyard() {
   const [language, setLanguage] = useState("PT")
-  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -79,11 +78,11 @@ export default function TontonShipyard() {
               <Link href="#servicos" className="text-[#0B3C5D] hover:text-[#16B4C6] transition-colors">
                 Serviços
               </Link>
+              <Link href="#legal-tax" className="text-[#0B3C5D] hover:text-[#16B4C6] transition-colors">
+                Jurídico & Fiscal
+              </Link>
               <Link href="#financeiro" className="text-[#0B3C5D] hover:text-[#16B4C6] transition-colors">
                 Financeiro
-              </Link>
-              <Link href="#contato" className="text-[#0B3C5D] hover:text-[#16B4C6] transition-colors">
-                Contato
               </Link>
             </div>
             <div className="flex items-center space-x-4">
@@ -95,28 +94,15 @@ export default function TontonShipyard() {
                 <option value="PT">PT</option>
                 <option value="EN">EN</option>
               </select>
-              <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-                <DialogTrigger asChild>
-                  <Button className="bg-[#16B4C6] hover:bg-[#0B3C5D] text-white">
-                    <Download className="w-4 h-4 mr-2" />
-                    Plano de Negócios
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Download do Plano de Negócios</DialogTitle>
-                    <DialogDescription>
-                      Baixe nosso plano de negócios completo com todas as projeções financeiras e análises de mercado.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="flex justify-center">
-                    <Button className="bg-[#16B4C6] hover:bg-[#0B3C5D]">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
-                    </Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              <Link
+                href="https://docs.google.com/document/d/1qF-UaBgMnlguAZe78Abp_Yynby_Tt54v/edit?usp=sharing&ouid=116797172657187127284&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#16B4C6] hover:bg-[#0B3C5D] text-white px-4 py-2 rounded-md flex items-center gap-2 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                Plano de Negócios
+              </Link>
             </div>
           </div>
         </div>
@@ -221,14 +207,16 @@ export default function TontonShipyard() {
                     <div className="text-center">
                       <div className="text-4xl font-bold text-[#16B4C6] mb-2">13</div>
                       <p className="text-gray-600">Rebocadores ativos na Grande Vitória</p>
+                      <p className="text-xs text-gray-500 mt-1">Fonte: Marine Traffic</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-[#0B3C5D] mb-2">Dezenas</div>
-                      <p className="text-gray-600">Lanchas e embarcações de pesca artesanal</p>
+                      <div className="text-3xl font-bold text-[#0B3C5D] mb-2">2 de 3</div>
+                      <p className="text-gray-600">Estaleiros operantes na região</p>
+                      <p className="text-xs text-gray-500 mt-1">1 estaleiro encontra-se inoperante</p>
                     </div>
                     <div className="bg-[#16B4C6]/10 p-4 rounded-lg">
                       <p className="text-[#0B3C5D] font-semibold text-center">
-                        Mercado em expansão com alta demanda por serviços especializados
+                        Mercado com infraestrutura limitada e alta demanda reprimida
                       </p>
                     </div>
                   </div>
@@ -417,6 +405,77 @@ export default function TontonShipyard() {
         </div>
       </section>
 
+      {/* Estratégia de Mercado */}
+      <section className="py-20 bg-[#F5F7FA]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Estratégia de Mercado</h2>
+            <p className="text-xl text-gray-600">Posicionamento competitivo e parcerias estratégicas</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div {...fadeInUp}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center text-[#0B3C5D]">
+                    <Users className="w-6 h-6 mr-2" />
+                    Estratégia de Ingresso
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Parcerias com empresas locais e sistema de comissionamento</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Remuneração variável para colaboradores em vendas</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Aproveitamento da rede de contatos UMI SAN/Hydrosolos</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                      <span>Precificação competitiva para penetração de mercado</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div {...fadeInUp}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center text-[#0B3C5D]">
+                    <TrendingUp className="w-6 h-6 mr-2" />
+                    Posicionamento
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-[#16B4C6]/10 rounded-lg">
+                      <h4 className="font-semibold text-[#0B3C5D] mb-2">Proposta de Valor</h4>
+                      <p className="text-gray-600 text-sm">
+                        Atendimento de qualidade com organização e pronto atendimento, mantendo equilíbrio entre preço e
+                        qualidade dos serviços.
+                      </p>
+                    </div>
+                    <div className="p-4 bg-green-50 rounded-lg">
+                      <h4 className="font-semibold text-green-800 mb-2">Diferencial Competitivo</h4>
+                      <p className="text-green-700 text-sm">
+                        Ambiente limpo, bem pintado e receptivo, evitando necessidade de altos investimentos iniciais.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Plano Financeiro */}
       <section id="financeiro" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -478,7 +537,7 @@ export default function TontonShipyard() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-red-50 rounded">
-                        <div className="text-2xl font-bold text-red-600">R$ 340-405k</div>
+                        <div className="text-2xl font-bold text-red-600">R$ 405k confirmados</div>
                         <p className="text-sm text-gray-600">Desembolso 2024 (terceiros)</p>
                       </div>
                       <div className="text-center p-4 bg-orange-50 rounded">
@@ -506,6 +565,9 @@ export default function TontonShipyard() {
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <p className="text-green-800 font-semibold text-center">Payback &lt; 12 meses</p>
+                    </div>
+                    <div className="mt-2 text-center">
+                      <p className="text-xs text-gray-500">SS Naval aumentou 400% (2021-24)</p>
                     </div>
                   </div>
                 </CardContent>
@@ -671,143 +733,6 @@ export default function TontonShipyard() {
         </div>
       </section>
 
-      {/* Estrutura Jurídica */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Estrutura Jurídica</h2>
-            <p className="text-xl text-gray-600">Forma societária e objeto social</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div {...fadeInUp}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-[#0B3C5D]">Forma Societária</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="text-center p-4 bg-[#16B4C6]/10 rounded-lg">
-                    <div className="text-2xl font-bold text-[#0B3C5D] mb-2">S.A. – Lucro Real</div>
-                    <p className="text-gray-600">Sociedade Anônima (Ano 1)</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#0B3C5D]">Acordo de Acionistas</h4>
-                    <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-                      <span>UMI SAN</span>
-                      <span className="font-bold text-[#16B4C6]">51%</span>
-                    </div>
-                    <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-                      <span>Investidores</span>
-                      <span className="font-bold text-[#0B3C5D]">49%</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div {...fadeInUp}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-[#0B3C5D]">Objeto Social / CNAE</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-gray-50 rounded">
-                      <div className="font-semibold">3317-1/01</div>
-                      <p className="text-sm text-gray-600">Manutenção e reparação de embarcações</p>
-                    </div>
-                    <div className="p-3 bg-gray-50 rounded">
-                      <div className="font-semibold">3011-3/01, 3011-3/02</div>
-                      <p className="text-sm text-gray-600">Construção de embarcações</p>
-                    </div>
-                    <div className="p-3 bg-gray-50 rounded">
-                      <div className="font-semibold">3831-9/99</div>
-                      <p className="text-sm text-gray-600">Recuperação de materiais metálicos</p>
-                    </div>
-                    <div className="p-3 bg-gray-50 rounded">
-                      <div className="font-semibold">71.12-0-00</div>
-                      <p className="text-sm text-gray-600">Serviços de engenharia</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Matriz de Risco */}
-      <section className="py-20 bg-[#F5F7FA]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Matriz de Risco</h2>
-            <p className="text-xl text-gray-600">Análise de riscos e estratégias de mitigação</p>
-          </motion.div>
-
-          <motion.div {...fadeInUp}>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-[#0B3C5D]">Principais Riscos Identificados</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="font-bold">Risco</TableHead>
-                      <TableHead className="font-bold text-center">Prob.</TableHead>
-                      <TableHead className="font-bold text-center">Impacto</TableHead>
-                      <TableHead className="font-bold">Mitigação</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Escritura/RIP faltante</TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="destructive">Alta</Badge>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="destructive">Alta</Badge>
-                      </TableCell>
-                      <TableCell>Due-diligence + cláusula rescisória</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Licenças ambientais</TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="destructive">Alta</Badge>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="secondary">Média</Badge>
-                      </TableCell>
-                      <TableCell>Operar manutenção externa + apoio consultoria</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Capacidade 370 m²</TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="secondary">Média</Badge>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="secondary">Média</Badge>
-                      </TableCell>
-                      <TableCell>Estudo dique flutuante modular</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Concorrentes SS Naval/Zemax</TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="secondary">Média</Badge>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <Badge variant="secondary">Média</Badge>
-                      </TableCell>
-                      <TableCell>Preço de penetração ≤ R$ 600 & serviço premium</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Governança & Grupo */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -890,60 +815,174 @@ export default function TontonShipyard() {
         </div>
       </section>
 
-      {/* Contato */}
-      <section id="contato" className="py-20 bg-[#F5F7FA]">
+      {/* PT-BR: Bloco Jurídico & Fiscal */}
+      <section id="legal-tax" className="py-20 bg-[#F5F7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Contato</h2>
-            <p className="text-xl text-gray-600">Entre em contato conosco</p>
+            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Estrutura Jurídica & Fiscal</h2>
+            <p className="text-xl text-gray-600">Governança, tributação e compliance corporativo</p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div {...fadeInUp}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-[#0B3C5D]">Informações de Contato</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-[#16B4C6]" />
-                    <span>Rua Beira Mar, 71 - Vila Velha/ES</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-[#16B4C6]" />
-                    <span>+55 (27) 9999-9999</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-[#16B4C6]" />
-                    <span>contato@tontonshipyard.com.br</span>
-                  </div>
-                  <div className="mt-6 h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500">Mapa - Rua Beira Mar, 71</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* CARD 1 – Forma Societária */}
+            <motion.article className="p-6 bg-white shadow-lg rounded-xl" {...fadeInUp}>
+              <div className="flex items-center mb-4">
+                <Scale className="w-6 h-6 text-[#16B4C6] mr-2" />
+                <h3 className="text-lg font-semibold text-[#0B3C5D]">Forma Societária</h3>
+              </div>
+              <p className="text-[#0B3C5D] font-bold text-xl mb-2">S.A. — Lucro Real</p>
+              <p className="text-gray-600 text-sm">
+                Sociedade Anônima com regime tributário <strong>Lucro Real</strong>
+                desde o primeiro exercício, possibilitando aproveitamento integral de créditos fiscais e transparência
+                para investidores institucionais.
+              </p>
+            </motion.article>
 
-            <motion.div {...fadeInUp}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-[#0B3C5D]">Envie uma Mensagem</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <Input placeholder="Nome" />
-                      <Input placeholder="Empresa" />
-                    </div>
-                    <Input type="email" placeholder="E-mail" />
-                    <Input placeholder="Telefone" />
-                    <Textarea placeholder="Mensagem" rows={4} />
-                    <Button className="w-full bg-[#16B4C6] hover:bg-[#0B3C5D]">Enviar Mensagem</Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
+            {/* CARD 2 – Objeto Social / CNAE */}
+            <motion.article className="p-6 bg-white shadow-lg rounded-xl" {...fadeInUp}>
+              <div className="flex items-center mb-4">
+                <FileText className="w-6 h-6 text-[#16B4C6] mr-2" />
+                <h3 className="text-lg font-semibold text-[#0B3C5D]">Objeto Social / CNAE</h3>
+              </div>
+              <ul className="space-y-2 text-gray-700 text-sm">
+                <li className="flex items-start">
+                  <span className="font-semibold text-[#0B3C5D] mr-2">3317-1/01</span>
+                  <span>— Manutenção e reparo de embarcações</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-semibold text-[#0B3C5D] mr-2">3011-3/01</span>
+                  <span>— Construção de embarcações de grande porte</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-semibold text-[#0B3C5D] mr-2">3011-3/02</span>
+                  <span>— Construção de embarcações comerciais e especiais</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-semibold text-[#0B3C5D] mr-2">3831-9/99</span>
+                  <span>— Recuperação de materiais metálicos</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-semibold text-[#0B3C5D] mr-2">71.12-0/00</span>
+                  <span>— Serviços de engenharia</span>
+                </li>
+              </ul>
+            </motion.article>
+
+            {/* CARD 3 – Obrigações Fiscais e Contábeis */}
+            <motion.article className="p-6 bg-white shadow-lg rounded-xl md:col-span-2" {...fadeInUp}>
+              <div className="flex items-center mb-4">
+                <Calculator className="w-6 h-6 text-[#16B4C6] mr-2" />
+                <h3 className="text-lg font-semibold text-[#0B3C5D]">Obrigações Fiscais & Contábeis</h3>
+              </div>
+              <ul className="list-disc pl-5 text-gray-700 text-sm space-y-2">
+                <li>Entrega de ECD, ECF e SPED Fiscal a partir do ano 1.</li>
+                <li>Controle de créditos de PIS/COFINS sobre CAPEX.</li>
+                <li>
+                  Provisão contábil para <em>juros e multa</em> em linha própria (placeholder já configurado no Plano
+                  Financeiro).
+                </li>
+                <li>
+                  Política de <strong>Transfer Pricing</strong> aplicada a serviços intra-grupo (UMI SAN & Hydrosolos).
+                </li>
+              </ul>
+            </motion.article>
+
+            {/* CARD 4 – Compliance & Licenças */}
+            <motion.article className="p-6 bg-white shadow-lg rounded-xl md:col-span-2" {...fadeInUp}>
+              <div className="flex items-center mb-4">
+                <Certificate className="w-6 h-6 text-[#16B4C6] mr-2" />
+                <h3 className="text-lg font-semibold text-[#0B3C5D]">Compliance & Licenciamento</h3>
+              </div>
+              <ol className="list-decimal pl-5 text-gray-700 text-sm space-y-2">
+                <li>CNPJ + Inscrição Estadual (M0-M1).</li>
+                <li>Alvará municipal & Vigilância Sanitária (M1-M2).</li>
+                <li>Licenças ambientais (LO & LI) — prazo estimado 6-12 meses.</li>
+                <li>Registro no RIP & ANTT/ANTAQ para operação portuária.</li>
+                <li>
+                  Habilitação no{" "}
+                  <span
+                    className="font-bold text-[#16B4C6] cursor-help border-b border-dotted border-[#16B4C6]"
+                    title="Fundo da Marinha Mercante - Linha de crédito especializada para o setor naval"
+                  >
+                    FMM
+                  </span>{" "}
+                  para linha de crédito de expansão.
+                </li>
+              </ol>
+            </motion.article>
           </div>
+        </div>
+      </section>
+
+      {/* Matriz de Risco */}
+      <section className="py-20 bg-[#F5F7FA]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Matriz de Risco</h2>
+            <p className="text-xl text-gray-600">Análise de riscos e estratégias de mitigação</p>
+          </motion.div>
+
+          <motion.div {...fadeInUp}>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-[#0B3C5D]">Principais Riscos Identificados</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="font-bold">Risco</TableHead>
+                      <TableHead className="font-bold text-center">Prob.</TableHead>
+                      <TableHead className="font-bold text-center">Impacto</TableHead>
+                      <TableHead className="font-bold">Mitigação</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Escritura/RIP faltante</TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="destructive">Alta</Badge>
+                      </TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="destructive">Alta</Badge>
+                      </TableCell>
+                      <TableCell>Due-diligence + cláusula rescisória</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Licenças ambientais</TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="destructive">Alta</Badge>
+                      </TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="secondary">Média</Badge>
+                      </TableCell>
+                      <TableCell>Operar manutenção externa + apoio consultoria</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Capacidade 370 m²</TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="secondary">Média</Badge>
+                      </TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="secondary">Média</Badge>
+                      </TableCell>
+                      <TableCell>Estudo dique flutuante modular</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Concorrentes SS Naval/Zemax</TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="secondary">Média</Badge>
+                      </TableCell>
+                      <TableCell className="text-center">
+                        <Badge variant="secondary">Média</Badge>
+                      </TableCell>
+                      <TableCell>Preço de penetração ≤ R$ 600 & serviço premium</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 

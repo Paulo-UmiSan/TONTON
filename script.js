@@ -1,21 +1,35 @@
-// Accordion functionality
-function toggleAccordion(index) {
-  const accordionItems = document.querySelectorAll(".accordion-item")
-  const currentItem = accordionItems[index]
-  const isActive = currentItem.classList.contains("active")
-
-  // Close all accordion items
-  accordionItems.forEach((item) => {
-    item.classList.remove("active")
-  })
-
-  // Open current item if it wasn't active
-  if (!isActive) {
-    currentItem.classList.add("active")
+// Smooth scrolling function
+function scrollToSection(sectionId) {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
   }
 }
 
-// Add to existing initialization
+// Modal functions
+function openModal(modalId) {
+  const modal = document.getElementById(modalId)
+  if (modal) {
+    modal.classList.add("show")
+    document.body.style.overflow = "hidden"
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId)
+  if (modal) {
+    modal.classList.remove("show")
+    document.body.style.overflow = "auto"
+  }
+}
+
+// Lucide icons import or declaration should be here
+const lucide = window.lucide // Example declaration, replace with actual import if available
+
+// Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize Lucide icons
   if (typeof lucide !== "undefined") {
@@ -47,16 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Contact form submission
-  const contactForm = document.getElementById("contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
-      alert("Mensagem enviada com sucesso! Entraremos em contato em breve.")
-      contactForm.reset()
-    })
-  }
-
   // Fade in animation on scroll
   const observerOptions = {
     threshold: 0.1,
@@ -78,4 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
     observer.observe(el)
   })
+
+  // Close modal when clicking outside
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal")) {
+      e.target.classList.remove("show")
+      document.body.style.overflow = "auto"
+    }
+  })
+
+  // Language selector functionality
+  const languageSelector = document.getElementById("language-selector")
+  if (languageSelector) {
+    languageSelector.addEventListener("change", (e) => {
+      // Here you would implement language switching logic
+      console.log("Language changed to:", e.target.value)
+    })
+  }
+})
+
+// Navbar scroll effect
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar")
+  if (window.scrollY > 100) {
+    navbar.style.background = "rgba(255, 255, 255, 0.98)"
+  } else {
+    navbar.style.background = "rgba(255, 255, 255, 0.95)"
+  }
 })
